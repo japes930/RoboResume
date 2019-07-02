@@ -4,6 +4,10 @@ public class Experience {
     private String compName, title, yrStart, yrEnd;
     private Duties duties;
 
+    public Experience(){
+
+    }
+
     public Experience(String compName, String title, String yrStart, String yrEnd){
         this.compName = compName;
         this.title = title;
@@ -45,7 +49,7 @@ public class Experience {
     }
 
     public String toString(){
-        return this.title + "\n" +  this.compName + ", " + this.yrStart + " - " + this.yrEnd;
+        return getTitle() + "\n" +  getCompName() + ", " + getYrStart() + " - " + getYrEnd();
     }
 }
 

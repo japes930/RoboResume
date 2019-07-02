@@ -7,17 +7,17 @@ public class Resume {
     private Skills skills;
     private Experience experience;
 
+
     public Resume(
             String name, String email, String phoneNum){
         this.name = name;
         this.email = email;
         this.phoneNum = phoneNum;
         this.education = new Education();
-//        this.experience = new Experience
-//        this.skills = new Skills();
+        this.experience = new Experience();
+        this.skills = new Skills();
 
     }
-
 
     public String toString(){
         return this.name +

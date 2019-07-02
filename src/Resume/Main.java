@@ -9,6 +9,7 @@ public class Main {
 
 
         Scanner keyboard = new Scanner(System.in);
+        ArrayList<Resume> resumeList = new ArrayList<>();
         ArrayList<Education> eduList = new ArrayList<>();
         ArrayList<Skills> skillsList = new ArrayList<>();
         ArrayList<Experience> expList = new ArrayList<>();
@@ -47,6 +48,7 @@ public class Main {
                 String degree = keyboard.nextLine();
                 System.out.println("What year did you graduate?");
                 String year = keyboard.nextLine(); //Had to change change from int to year or wouldn't allow input at liine 53
+
 
                 Education eduNew = new Education(school, major, degree, year);
                 eduList.add(eduNew);
@@ -87,7 +89,7 @@ public class Main {
             reply = keyboard.nextLine();
         }
 
-        System.out.println("number of jobs: " + expList.size());
+//        System.out.println("number of jobs: " + expList.size()); TEST CODE
 
 
 //Entering Skills data
@@ -106,7 +108,7 @@ public class Main {
             reply = keyboard.nextLine();
         }
 
-        System.out.println("number of skills: " + skillsList.size());
+//        System.out.println("number of skills: " + skillsList.size()); TestCode
 
 
 //Printing information
@@ -129,21 +131,19 @@ public class Main {
                 for (int j = 0; j < dutyList.size(); j++){
                     System.out.println(dutyList.get(j).toString());
                 }
+                System.out.println();
             }
-            System.out.println();
+
         }
 
         if (skillsList.size() > 0) {
+            System.out.println();
             System.out.println("SKILLS");
             for (int i = 0; i < skillsList.size(); i++) {
                 System.out.println(skillsList.get(i).toString());
             }
             System.out.println();
         }
-
-
-
-
 
     }
 }

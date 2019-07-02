@@ -13,6 +13,8 @@ public class Resume {
         this.email = email;
         this.phoneNum = phoneNum;
         this.education = new Education();
+//        this.experience = new Experience
+//        this.skills = new Skills();
 
     }
 

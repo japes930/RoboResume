@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 public class Education {
     private String school, degree, major;
-    private int year;
-    public ArrayList<String> eduList;
+    private String year;
+//    public ArrayList<String> eduList;
     public Education(){
 
     };
-    public Education(String school,  String major, String degree, int year) {
+    public Education(String school,  String major, String degree, String year) {
         this.school = school;
         this.degree = degree;
         this.major = major;
@@ -34,16 +34,24 @@ public class Education {
         this.degree = degree;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
     @Override
     public String toString(){
+
+//        if(eduList.size()>0) {
+////            System.out.println("EDUCATION");
+////            for(int i=0; i <eduList.size(); i++) {
+////                System.out.println(eduList.get(i).toString());
+////                System.out.println();
+////            }
+////        }
         return (this.major + ", " + this.degree + "\n" +
                 this.school + " " + this.year);
     }
